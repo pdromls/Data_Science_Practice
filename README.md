@@ -6,7 +6,9 @@ O foco é ir além da reprodução das aulas: os notebooks trazem anotações cr
 
 ## 📌 Conteúdo Estudado
 - Configuração de ambiente e boas práticas de versionamento
-- Análise Exploratória de Dados (EDA) e Feature Engineering *(em andamento)*
+- **Módulo 01: Análise Exploratória de Dados (EDA)**
+  - [`notebooks/01_eda/01_eda_flight_price.ipynb`](notebooks/01_eda/01_eda_flight_price.ipynb): EDA estatística e visual sobre preços de passagens aéreas, preservação de séries temporais e análise de outliers.
+- **Módulo 02: Feature Engineering & Encoding** *(próxima etapa)*
 
 *(Novos tópicos e módulos de Machine Learning serão adicionados aqui conforme forem concluídos).*
 
