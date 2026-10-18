@@ -8,7 +8,9 @@ O foco é ir além da reprodução das aulas: os notebooks trazem anotações cr
 - Configuração de ambiente e boas práticas de versionamento
 - **Módulo 01: Análise Exploratória de Dados (EDA)**
   - [`notebooks/01_eda/01_eda_flight_price.ipynb`](notebooks/01_eda/01_eda_flight_price.ipynb): EDA estatística e visual sobre preços de passagens aéreas, preservação de séries temporais e análise de outliers.
-- **Módulo 02: Feature Engineering & Encoding** *(próxima etapa)*
+- **Módulo 02: Feature Engineering & Encoding**
+  - [`notebooks/02_feature_engineering/02_feature_engineering_flight_price.ipynb`](notebooks/02_feature_engineering/02_feature_engineering_flight_price.ipynb): Pré-processamento modular (funções reutilizáveis), engenharia de features temporais, prevenção de vazamento de dados (split pré-encoding), ColumnTransformer e normalização do target.
+- **Módulo 03: Introdução e Algoritmos de Machine Learning** *(próxima etapa)*
 
 *(Novos tópicos e módulos de Machine Learning serão adicionados aqui conforme forem concluídos).*
 
