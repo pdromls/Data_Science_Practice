@@ -12,6 +12,8 @@ O foco é ir além da reprodução das aulas: os notebooks trazem anotações cr
   - [`notebooks/02_feature_engineering/02_feature_engineering_flight_price.ipynb`](notebooks/02_feature_engineering/02_feature_engineering_flight_price.ipynb): Pré-processamento modular (funções reutilizáveis), engenharia de features temporais, prevenção de vazamento de dados (split pré-encoding), ColumnTransformer e normalização do target.
 - **Módulo 03: Modelos Lineares — Regressão Linear Simples**
   - [`notebooks/03_linear_regression/03_simple_linear_regression.ipynb`](notebooks/03_linear_regression/03_simple_linear_regression.ipynb): Pipeline completo de regressão linear simples, treinamento na escala original vs. padronizada, correção do intercepto no `statsmodels`, avaliação contra baseline ingênuo (`DummyRegressor`) e diagnóstico rigoroso de resíduos (Gauss-Markov).
+- **Módulo 04: Modelos Lineares — Regressão Linear Múltipla**
+  - [`notebooks/04_multiple_linear_regression/04_multiple_linear_regression.ipynb`](notebooks/04_multiple_linear_regression/04_multiple_linear_regression.ipynb): Modelagem multivariada com indicadores econômicos, diagnóstico de multicolinearidade severa com cálculo do VIF, prevenção de vazamento de dados no teste (`transform` estrito), correção do intercepto no `statsmodels` (`sm.add_constant`), comparação contra baseline ingênuo (`DummyRegressor`) e auditoria de resíduos (Gauss-Markov).
 
 ## 📚 Guias Técnicos e Teóricos
 Na pasta [`docs/guides/`](docs/guides/), encontram-se guias detalhados de aprofundamento:
