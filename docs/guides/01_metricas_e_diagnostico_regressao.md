@@ -32,7 +32,7 @@ Em vez de aplicar o módulo, o MSE **eleva cada erro ao quadrado** antes de calc
 
 $$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
 
-* **Escala/Unidade:** Fica na **unidade original elevada ao quadrado** ($\text{R\$}^2$, $\text{dias}^2$, $\text{kg}^2$), dificultando a interpretação direta pelo negócio.
+* **Escala/Unidade:** Fica na **unidade original elevada ao quadrado** ($\text{reais}^2$, $\text{dias}^2$, $\text{kg}^2$), dificultando a interpretação direta pelo negócio.
 * **Comportamento matemático:** Atua como um fiscal implacável. Pequenos desvios recebem penalidades baixas, mas erros grandes são multiplicados de forma desproporcional.
 * **Uso computacional:** Por ser uma parábola contínua, suave e derivável em todos os pontos, o MSE é a função de perda padrão utilizada para calibrar algoritmos de otimização (como OLS e Gradiente Descendente).
 
@@ -52,22 +52,22 @@ $$\text{RMSE} = \sqrt{\text{MSE}} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat
 
 ### 1.4 Exemplo Comparativo: Erros Constantes vs. Erro Extremo
 
-Considere o aluguel real de 3 imóveis: **R\$ 1.000, R\$ 2.000 e R\$ 3.000**.
+Considere o aluguel real de 3 imóveis: **R$ 1.000, R$ 2.000 e R$ 3.000**.
 
 #### Modelo A (Erros pequenos e homogêneos)
-* Previsões: R\$ 1.100, R\$ 2.100, R\$ 3.100 (resíduos de $+100$ em cada)
-* $\text{MAE} = \frac{100 + 100 + 100}{3} = \mathbf{100 \text{ R\$}}$
-* $\text{MSE} = \frac{100^2 + 100^2 + 100^2}{3} = 10.000 \text{ R\$}^2$
-* $\text{RMSE} = \sqrt{10.000} = \mathbf{100 \text{ R\$}}$
+* Previsões: R$ 1.100, R$ 2.100, R$ 3.100 (resíduos de $+100$ em cada)
+* $\text{MAE} = \frac{100 + 100 + 100}{3} = \mathbf{100\text{ reais}}$
+* $\text{MSE} = \frac{100^2 + 100^2 + 100^2}{3} = \mathbf{10.000\text{ reais}^2}$
+* $\text{RMSE} = \sqrt{10.000} = \mathbf{100\text{ reais}}$
 * *Quando todos os erros têm a mesma magnitude, $\text{MAE} = \text{RMSE}$.*
 
 #### Modelo B (Acertos perfeitos e uma catástrofe isolada)
-* Previsões: R\$ 1.000, R\$ 2.000, R\$ 3.300 (resíduos de $0, 0, +300$)
-* $\text{MAE} = \frac{0 + 0 + 300}{3} = \mathbf{100 \text{ R\$}}$
-* $\text{MSE} = \frac{0^2 + 0^2 + 300^2}{3} = 30.000 \text{ R\$}^2$
-* $\text{RMSE} = \sqrt{30.000} \approx \mathbf{173{,}20 \text{ R\$}}$
+* Previsões: R$ 1.000, R$ 2.000, R$ 3.300 (resíduos de $0, 0, +300$)
+* $\text{MAE} = \frac{0 + 0 + 300}{3} = \mathbf{100\text{ reais}}$
+* $\text{MSE} = \frac{0^2 + 0^2 + 300^2}{3} = \mathbf{30.000\text{ reais}^2}$
+* $\text{RMSE} = \sqrt{30.000} \approx \mathbf{173{,}20\text{ reais}}$
 
-**Conclusão prática:** Para o MAE, ambos os modelos são idênticos (erro médio de R\$ 100). Para o RMSE, o Modelo B é 73% pior, denunciando o impacto do erro grave isolado de R\$ 300.
+**Conclusão prática:** Para o MAE, ambos os modelos são idênticos (erro médio de R$ 100). Para o RMSE, o Modelo B é 73% pior, denunciando o impacto do erro grave isolado de R$ 300.
 
 ---
 
@@ -100,10 +100,10 @@ No RMSE, a ponderação é **quadrática**:
 
 ### 3.2 Por que o RMSE é o padrão mais adotado no mercado?
 Na maioria das operações reais de negócios, o impacto financeiro de um erro cresce de forma exponencial:
-1. **Erro aceitável:** Errar o aluguel em R\$ 100 faz o imóvel alugar com poucos dias de atraso.
-2. **Erro severo:** Errar o aluguel em R\$ 1.800 faz o imóvel encalhar por um ano, gerando prejuízos com condomínio, perda do cliente e atrito judicial.
+1. **Erro aceitável:** Errar o aluguel em R$ 100 faz o imóvel alugar com poucos dias de atraso.
+2. **Erro severo:** Errar o aluguel em R$ 1.800 faz o imóvel encalhar por um ano, gerando prejuízos com condomínio, perda do cliente e atrito judicial.
 
-Se avaliarmos pelo MAE, esse erro de R\$ 1.800 seria considerado apenas "seis erros de R\$ 300". Pelo RMSE, a penalidade explode para $1.800^2$, forçando o modelo matemático a eliminar anomalias graves.
+Se avaliarmos pelo MAE, esse erro de R$ 1.800 seria considerado apenas "seis erros de R$ 300". Pelo RMSE, a penalidade explode para $1.800^2$, forçando o modelo matemático a eliminar anomalias graves.
 
 ### 3.3 A Distinção entre Tipos de Outliers
 * **Outlier por Falha de Coleta (O caso do motoboy):** O entregador teve o celular roubado e a entrega registrou 3 dias em vez de 30 minutos. 
